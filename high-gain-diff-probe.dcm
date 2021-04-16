@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BUF634A
+D High-Speed, 210 MHz, Closed-Loop Buffer, SOIC-8
+K buffer amplifier
+F https://www.ti.com/lit/ds/symlink/buf634a.pdf?ts=1618584295467&ref_url=https%253A%252F%252Fcz.mouser.com%252F
+$ENDCMP
+#
+$CMP LT1010
+D High-Speed, 20 MHz, Closed-Loop Buffer, SOIC-8
+K buffer amplifier
+F https://www.analog.com/media/en/technical-documentation/data-sheets/LT1010.pdf
+$ENDCMP
+#
+#End Doc Library
