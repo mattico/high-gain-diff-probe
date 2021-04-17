@@ -121,36 +121,32 @@ Wire Wire Line
 $Comp
 L power:GND #PWR02
 U 1 1 607EB5BA
-P 1500 4150
-F 0 "#PWR02" H 1500 3900 50  0001 C CNN
-F 1 "GND" H 1505 3977 50  0000 C CNN
-F 2 "" H 1500 4150 50  0001 C CNN
-F 3 "" H 1500 4150 50  0001 C CNN
-	1    1500 4150
+P 1500 4250
+F 0 "#PWR02" H 1500 4000 50  0001 C CNN
+F 1 "GND" H 1505 4077 50  0000 C CNN
+F 2 "" H 1500 4250 50  0001 C CNN
+F 3 "" H 1500 4250 50  0001 C CNN
+	1    1500 4250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1700 3650 1800 3650
+	1700 3750 1800 3750
 Wire Wire Line
-	1800 3650 1800 3950
+	1800 3750 1800 4050
 Wire Wire Line
-	1800 3950 1700 3950
-Wire Wire Line
-	1800 3650 2200 3650
-Connection ~ 1800 3650
-Text Label 1900 3650 0    50   ~ 0
+	1800 4050 1700 4050
+Connection ~ 1800 3750
+Text Label 1900 3750 0    50   ~ 0
 IN+
 Wire Wire Line
-	2300 3300 2200 3300
+	2300 3950 2200 3950
 Wire Wire Line
-	2200 3300 2200 2950
+	2200 3950 2200 4300
 Wire Wire Line
-	2200 2950 2300 2950
+	3000 4300 3000 3950
 Wire Wire Line
-	3000 2950 3000 3300
-Wire Wire Line
-	3000 3300 2900 3300
-Connection ~ 2200 3300
+	3000 3950 2900 3950
+Connection ~ 2200 3950
 $Comp
 L power:GND #PWR08
 U 1 1 60893EAD
@@ -265,27 +261,23 @@ Text Label 9550 2700 0    50   ~ 0
 FIL-
 Text Label 9550 2900 0    50   ~ 0
 FIL+
-NoConn ~ 8200 5000
-NoConn ~ 8200 4300
 Wire Wire Line
-	7600 5200 7600 4950
+	7600 5050 7600 4800
 Wire Wire Line
-	7600 4500 7600 4650
+	7600 4350 7600 4500
 Wire Wire Line
-	7250 5100 7250 4950
+	7300 5150 7300 5000
 Wire Wire Line
-	7600 5200 8200 5200
+	7600 5050 8200 5050
 Wire Wire Line
-	7250 5100 8200 5100
+	7600 4350 8200 4350
 Wire Wire Line
-	7600 4500 8200 4500
+	8200 4450 7300 4450
 Wire Wire Line
-	8200 4400 7250 4400
-Wire Wire Line
-	7250 4400 7250 4650
-Text Label 7700 4500 0    50   ~ 0
+	7300 4450 7300 4700
+Text Label 7700 4350 0    50   ~ 0
 RG_500X
-Text Label 7700 4400 0    50   ~ 0
+Text Label 7700 4450 0    50   ~ 0
 RG_50X
 Text Label 9050 3700 0    50   ~ 0
 AMPIN+
@@ -417,7 +409,7 @@ Wire Wire Line
 Wire Wire Line
 	3250 8450 3250 8950
 Wire Wire Line
-	3250 7650 3250 7450
+	3250 7650 3250 7550
 Wire Wire Line
 	3250 7950 3250 8450
 Connection ~ 3250 8450
@@ -454,11 +446,11 @@ Wire Wire Line
 	5250 3450 5250 3700
 Connection ~ 5250 3700
 Wire Wire Line
-	2200 4050 2450 4050
+	2200 3350 2450 3350
 Wire Wire Line
-	2750 4050 3000 4050
+	2750 3350 3000 3350
 Wire Wire Line
-	2900 2950 3000 2950
+	2900 4300 3000 4300
 Wire Wire Line
 	4250 3450 4250 3700
 Wire Wire Line
@@ -477,23 +469,18 @@ Wire Wire Line
 Wire Wire Line
 	4250 2800 4750 2800
 Wire Wire Line
-	2200 3650 2200 4050
+	2200 3350 2200 3750
 Wire Wire Line
-	2200 3300 2200 3650
-Connection ~ 2200 3650
+	2200 3950 2200 3750
 Wire Wire Line
-	2200 3650 2450 3650
+	2750 3750 3400 3750
 Wire Wire Line
-	2750 3650 3400 3650
+	3400 3850 3000 3850
 Wire Wire Line
-	3400 3550 3000 3550
+	3000 3850 3000 3950
+Connection ~ 3000 3950
 Wire Wire Line
-	3000 3550 3000 3300
-Connection ~ 3000 3300
-Wire Wire Line
-	3000 4050 3000 3750
-Wire Wire Line
-	3000 3750 3400 3750
+	3000 3650 3400 3650
 Wire Wire Line
 	3800 3700 4250 3700
 Connection ~ 4250 3700
@@ -636,15 +623,10 @@ Wire Wire Line
 	1350 8550 1700 8550
 Wire Wire Line
 	6250 8100 6250 8450
-Connection ~ 3250 7450
 Wire Wire Line
 	2050 8450 3250 8450
 Wire Wire Line
 	1350 8450 2050 8450
-Wire Wire Line
-	3100 9450 3250 9450
-Wire Wire Line
-	3100 7450 3250 7450
 Wire Wire Line
 	2050 7750 2200 7750
 Wire Wire Line
@@ -781,7 +763,6 @@ Wire Wire Line
 Connection ~ 4150 7450
 Wire Wire Line
 	3250 9450 4150 9450
-Connection ~ 3250 9450
 Connection ~ 4150 9450
 Text GLabel 5250 1800 1    50   Input ~ 0
 ATTEN-
@@ -1190,9 +1171,9 @@ Wire Wire Line
 Wire Wire Line
 	5000 8900 4650 8900
 Wire Wire Line
-	3000 1950 3400 1950
+	3000 1850 3400 1850
 Wire Wire Line
-	3400 1750 3000 1750
+	3400 2050 3000 2050
 $Comp
 L power:GND #PWR041
 U 1 1 6083BAC7
@@ -1205,24 +1186,24 @@ F 3 "" H 3250 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 2200 3250 2050
+	3250 2200 3250 1750
 Wire Wire Line
-	3250 2050 3400 2050
+	3250 1750 3400 1750
 $Comp
 L power:GND #PWR042
 U 1 1 6085560F
-P 3250 4000
-F 0 "#PWR042" H 3250 3750 50  0001 C CNN
-F 1 "GND" H 3255 3827 50  0000 C CNN
-F 2 "" H 3250 4000 50  0001 C CNN
-F 3 "" H 3250 4000 50  0001 C CNN
-	1    3250 4000
+P 3250 4050
+F 0 "#PWR042" H 3250 3800 50  0001 C CNN
+F 1 "GND" H 3255 3877 50  0000 C CNN
+F 2 "" H 3250 4050 50  0001 C CNN
+F 3 "" H 3250 4050 50  0001 C CNN
+	1    3250 4050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 4000 3250 3850
+	3250 4050 3250 3550
 Wire Wire Line
-	3250 3850 3400 3850
+	3250 3550 3400 3550
 Text Notes 700  9000 0    50   ~ 0
 External power input.\nBe careful about the\nground loop between\nscope and power supply.
 Text Notes 1700 7050 0    50   ~ 0
@@ -1246,19 +1227,19 @@ Text Notes 10100 7000 0    50   ~ 0
 TODO: Invert output?\nHysteresis?\nSize filter caps.
 Text Notes 3250 4700 0    50   ~ 0
 Gold-plated "dry" switch contacts will hopefully\nnot be damaged by the instantaneous voltage/\ncurrent into the attenuator, and will conduct\nvery low level signals without requiring "wetting".
-Text Notes 1800 4550 0    50   ~ 0
+Text Notes 2100 3000 0    50   ~ 0
 AC coupling caps could hold\ncharge and damage circuits.
-Text Label 3050 1750 0    50   ~ 0
+Text Label 3050 2050 0    50   ~ 0
 HiZ-
-Text Label 3050 1850 0    50   ~ 0
-AC-
 Text Label 3050 1950 0    50   ~ 0
+AC-
+Text Label 3050 1850 0    50   ~ 0
 LoZ-
-Text Label 3050 3550 0    50   ~ 0
+Text Label 3050 3850 0    50   ~ 0
 HiZ+
-Text Label 3050 3650 0    50   ~ 0
-AC+
 Text Label 3050 3750 0    50   ~ 0
+AC+
+Text Label 3050 3650 0    50   ~ 0
 LoZ+
 Text Notes 4250 1350 0    50   ~ 0
 20:1 Attenuator for HiZ inputs.\nProvides return path for INA input bias currents.\nSets corner for AC high-pass (~2Hz).
@@ -1266,7 +1247,7 @@ Text Notes 6000 1800 0    50   ~ 0
 Low-leakage diodes protect INA inputs from\ncommon mode voltages beyond the supply rails\nand differential voltages above 1V. Can handle\n500mA until they overheat or about 40V to GND\non the LoZ inputs.
 Text Notes 8050 1550 0    50   ~ 0
 33ohm resistors ensure protection diodes\nconduct before INA internal diodes, and\nform an RF low-pass filter with the capacitors.\nCould add a ferrite bead as well but be careful\nabout resonance.
-Text Notes 7600 5500 0    50   ~ 0
+Text Notes 6850 5500 0    50   ~ 0
 Default gain of INA is 2000X.\nCould use an SP3T switch.
 Text Notes 11050 2250 0    50   ~ 0
 Adjustable low-pass filter.\nC18: Just tones down very high frequencies.\nC20: 96.5kHz -3dB
@@ -1298,71 +1279,62 @@ Can parallel the input stage of the INA\nwith the filter pins. Can reduce the am
 Text Notes 2350 8600 0    50   ~ 0
 9V batteries discharge\nin an hour with the\noutput saturated into\n50 ohms.\n\n\n$0.10 per minute.
 Wire Wire Line
-	2750 1850 3400 1850
-Wire Wire Line
-	2450 1850 2200 1850
-Connection ~ 2200 1850
-Text Label 1900 1850 0    50   ~ 0
+	2750 1950 3400 1950
+Text Label 1900 1950 0    50   ~ 0
 IN-
-Connection ~ 1800 1850
 Wire Wire Line
-	2200 1850 1800 1850
+	1800 1950 1700 1950
 Wire Wire Line
-	1800 1850 1700 1850
+	1800 2250 1800 1950
 Wire Wire Line
-	1800 2150 1800 1850
-Wire Wire Line
-	1700 2150 1800 2150
+	1700 2250 1800 2250
 $Comp
 L power:GND #PWR01
 U 1 1 607EBAA9
-P 1500 2350
-F 0 "#PWR01" H 1500 2100 50  0001 C CNN
-F 1 "GND" H 1505 2177 50  0000 C CNN
-F 2 "" H 1500 2350 50  0001 C CNN
-F 3 "" H 1500 2350 50  0001 C CNN
-	1    1500 2350
+P 1500 2450
+F 0 "#PWR01" H 1500 2200 50  0001 C CNN
+F 1 "GND" H 1505 2277 50  0000 C CNN
+F 2 "" H 1500 2450 50  0001 C CNN
+F 3 "" H 1500 2450 50  0001 C CNN
+	1    1500 2450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2200 1150 2300 1150
+	2200 2500 2300 2500
 Wire Wire Line
-	2900 1150 3000 1150
+	2900 2500 3000 2500
 Wire Wire Line
-	3000 1750 3000 1500
-Connection ~ 3000 1500
+	2900 2150 3000 2150
 Wire Wire Line
-	2900 1500 3000 1500
+	3000 2150 3000 2500
 Wire Wire Line
-	3000 1500 3000 1150
+	2200 2150 2200 1950
+Connection ~ 2200 2150
 Wire Wire Line
-	2200 1500 2200 1850
-Connection ~ 2200 1500
+	2200 2150 2200 2500
 Wire Wire Line
-	2200 1500 2200 1150
-Wire Wire Line
-	2300 1500 2200 1500
+	2300 2150 2200 2150
 $Comp
 L Device:C C1
 U 1 1 607FDC50
-P 2450 1150
-F 0 "C1" V 2198 1150 50  0000 C CNN
-F 1 "27pF" V 2289 1150 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2488 1000 50  0001 C CNN
-F 3 "~" H 2450 1150 50  0001 C CNN
-	1    2450 1150
-	0    1    1    0   
+P 2450 2500
+F 0 "C1" V 2198 2500 50  0000 C CNN
+F 1 "27pF" V 2289 2500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2488 2350 50  0001 C CNN
+F 3 "~" H 2450 2500 50  0001 C CNN
+	1    2450 2500
+	0    1    -1   0   
 $EndComp
 $Comp
 L Device:C C5
 U 1 1 60CD504B
-P 2750 1150
-F 0 "C5" V 2498 1150 50  0000 C CNN
-F 1 "27pF" V 2589 1150 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2788 1000 50  0001 C CNN
-F 3 "~" H 2750 1150 50  0001 C CNN
-	1    2750 1150
-	0    1    1    0   
+P 2750 2500
+F 0 "C5" V 2498 2500 50  0000 C CNN
+F 1 "27pF" V 2589 2500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2788 2350 50  0001 C CNN
+F 3 "~" H 2750 2500 50  0001 C CNN
+	1    2750 2500
+	0    1    -1   0   
 $EndComp
 $Comp
 L Jumper:SolderJumper_2_Open JP1
@@ -1389,13 +1361,13 @@ $EndComp
 $Comp
 L Device:C C3
 U 1 1 60813F50
-P 2600 1850
-F 0 "C3" V 2348 1850 50  0000 C CNN
-F 1 "1uF FILM" V 2439 1850 50  0000 C CNN
-F 2 "high-gain-diff-probe:C_6054_WIMA" H 2638 1700 50  0001 C CNN
-F 3 "~" H 2600 1850 50  0001 C CNN
-F 4 "SMDTF04100YA00JT00" V 2600 1850 50  0001 C CNN "MPN"
-	1    2600 1850
+P 2600 1950
+F 0 "C3" V 2348 1950 50  0000 C CNN
+F 1 "1uF FILM" V 2439 1950 50  0000 C CNN
+F 2 "high-gain-diff-probe:C_6054_WIMA" H 2638 1800 50  0001 C CNN
+F 3 "~" H 2600 1950 50  0001 C CNN
+F 4 "SMDTF04100YA00JT00" V 2600 1950 50  0001 C CNN "MPN"
+	1    2600 1950
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1875,7 +1847,7 @@ U 1 1 611A5B8F
 P 1150 8450
 F 0 "J6" H 1050 8750 50  0000 C CNN
 F 1 "POWER" H 1050 8650 50  0000 C CNN
-F 2 "" H 1150 8450 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 1150 8450 50  0001 C CNN
 F 3 "~" H 1150 8450 50  0001 C CNN
 	1    1150 8450
 	-1   0    0    -1  
@@ -1984,89 +1956,56 @@ L Switch:SW_SPDT SW3
 U 1 1 60F99B6D
 P 11800 3500
 F 0 "SW3" V 11900 3700 50  0000 L CNN
-F 1 "SW_SPDT" V 11800 3700 50  0000 L CNN
-F 2 "" H 11800 3500 50  0001 C CNN
-F 3 "~" H 11800 3500 50  0001 C CNN
+F 1 "GF-626-0061" V 11800 3700 50  0000 L CNN
+F 2 "high-gain-diff-probe:SW_CW_GF-626_DPDT" H 11800 3500 50  0001 C CNN
+F 3 "http://switches-connectors-custom.cwind.com/Asset/GF-626-0061_2D%20DRAWING.PDF" H 11800 3500 50  0001 C CNN
 F 4 "Low Pass Enable" V 11700 3700 50  0000 L CNN "Name"
+F 5 "GF-626-0061" V 11800 3500 50  0001 C CNN "MPN"
 	1    11800 3500
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Switch:SW_DP3T SW2
-U 2 1 60E5860E
-P 8400 5100
-F 0 "SW2" H 8400 5383 50  0000 C CNN
-F 1 "MB04L1NCGD" H 8400 5292 50  0000 C CNN
-F 2 "" H 7775 5275 50  0001 C CNN
-F 3 "~" H 7775 5275 50  0001 C CNN
-	2    8400 5100
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_DP3T SW2
-U 1 1 60E57418
-P 8400 4400
-F 0 "SW2" H 8400 4773 50  0000 C CNN
-F 1 "MB04L1NCGD" H 8400 4682 50  0000 C CNN
-F 2 "" H 7775 4575 50  0001 C CNN
-F 3 "~" H 7775 4575 50  0001 C CNN
-F 4 "Gain Select" H 8400 4591 50  0000 C CNN "Name"
-	1    8400 4400
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:C C2
-U 1 1 607FE489
-P 2450 2950
-F 0 "C2" V 2198 2950 50  0000 C CNN
-F 1 "27pF" V 2289 2950 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2488 2800 50  0001 C CNN
-F 3 "~" H 2450 2950 50  0001 C CNN
-	1    2450 2950
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:C C6
 U 1 1 60C0CA0D
-P 2750 2950
-F 0 "C6" V 2498 2950 50  0000 C CNN
-F 1 "27pF" V 2589 2950 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2788 2800 50  0001 C CNN
-F 3 "~" H 2750 2950 50  0001 C CNN
-	1    2750 2950
-	0    1    1    0   
+P 2750 4300
+F 0 "C6" V 2498 4300 50  0000 C CNN
+F 1 "27pF" V 2589 4300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2788 4150 50  0001 C CNN
+F 3 "~" H 2750 4300 50  0001 C CNN
+	1    2750 4300
+	0    1    -1   0   
 $EndComp
 $Comp
 L Device:R_US R5
 U 1 1 60C6174D
-P 2750 1500
-F 0 "R5" V 2545 1500 50  0000 C CNN
-F 1 "475k" V 2636 1500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2790 1490 50  0001 C CNN
-F 3 "~" H 2750 1500 50  0001 C CNN
-	1    2750 1500
-	0    1    1    0   
+P 2750 2150
+F 0 "R5" V 2545 2150 50  0000 C CNN
+F 1 "475k" V 2636 2150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2790 2140 50  0001 C CNN
+F 3 "~" H 2750 2150 50  0001 C CNN
+	1    2750 2150
+	0    1    -1   0   
 $EndComp
 $Comp
 L Device:R_US R6
 U 1 1 60C01C71
-P 2750 3300
-F 0 "R6" V 2545 3300 50  0000 C CNN
-F 1 "475k" V 2636 3300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2790 3290 50  0001 C CNN
-F 3 "~" H 2750 3300 50  0001 C CNN
-	1    2750 3300
-	0    1    1    0   
+P 2750 3950
+F 0 "R6" V 2545 3950 50  0000 C CNN
+F 1 "475k" V 2636 3950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2790 3940 50  0001 C CNN
+F 3 "~" H 2750 3950 50  0001 C CNN
+	1    2750 3950
+	0    1    -1   0   
 $EndComp
 $Comp
 L Device:R_US R4
 U 1 1 60810AB2
-P 2600 4050
-F 0 "R4" V 2395 4050 50  0000 C CNN
-F 1 "50" V 2486 4050 50  0000 C CNN
-F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" V 2640 4040 50  0001 C CNN
-F 3 "~" H 2600 4050 50  0001 C CNN
-	1    2600 4050
+P 2600 3350
+F 0 "R4" V 2395 3350 50  0000 C CNN
+F 1 "50" V 2486 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" V 2640 3340 50  0001 C CNN
+F 3 "~" H 2600 3350 50  0001 C CNN
+	1    2600 3350
 	0    1    1    0   
 $EndComp
 $Comp
@@ -2139,24 +2078,26 @@ F 4 "25ML47MEFC6.3X5" H 6250 8950 50  0001 C CNN "MPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_DPST_x2 SW4
+L Switch:SW_DPDT_x2 SW4
 U 2 1 60931A1B
 P 2900 9450
-F 0 "SW4" H 2900 9685 50  0000 C CNN
-F 1 "SW_DPST_x2" H 2900 9594 50  0000 C CNN
-F 2 "" H 2900 9450 50  0001 C CNN
-F 3 "~" H 2900 9450 50  0001 C CNN
+F 0 "SW4" H 2900 9700 50  0000 C CNN
+F 1 "GF-626-0061" H 2900 9600 50  0000 C CNN
+F 2 "high-gain-diff-probe:SW_CW_GF-626_DPDT" H 2900 9450 50  0001 C CNN
+F 3 "http://switches-connectors-custom.cwind.com/Asset/GF-626-0061_2D%20DRAWING.PDF" H 2900 9450 50  0001 C CNN
+F 4 "GF-626-0061" H 2900 9450 50  0001 C CNN "MPN"
 	2    2900 9450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_DPST_x2 SW4
+L Switch:SW_DPDT_x2 SW4
 U 1 1 60930AFC
 P 2900 7450
-F 0 "SW4" H 2900 7685 50  0000 C CNN
-F 1 "SW_DPST_x2" H 2900 7594 50  0000 C CNN
-F 2 "" H 2900 7450 50  0001 C CNN
-F 3 "~" H 2900 7450 50  0001 C CNN
+F 0 "SW4" H 2900 7700 50  0000 C CNN
+F 1 "GF-626-0061" H 2900 7600 50  0000 C CNN
+F 2 "high-gain-diff-probe:SW_CW_GF-626_DPDT" H 2900 7450 50  0001 C CNN
+F 3 "http://switches-connectors-custom.cwind.com/Asset/GF-626-0061_2D%20DRAWING.PDF" H 2900 7450 50  0001 C CNN
+F 4 "GF-626-0061" H 2900 7450 50  0001 C CNN "MPN"
 	1    2900 7450
 	1    0    0    -1  
 $EndComp
@@ -2230,23 +2171,23 @@ $EndComp
 $Comp
 L Device:R_US R9
 U 1 1 60A584E5
-P 7250 4800
-F 0 "R9" H 7318 4846 50  0000 L CNN
-F 1 "154" H 7318 4755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7290 4790 50  0001 C CNN
-F 3 "~" H 7250 4800 50  0001 C CNN
-	1    7250 4800
+P 7300 4850
+F 0 "R9" H 7368 4896 50  0000 L CNN
+F 1 "154" H 7368 4805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7340 4840 50  0001 C CNN
+F 3 "~" H 7300 4850 50  0001 C CNN
+	1    7300 4850
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_US R10
 U 1 1 60A57D6E
-P 7600 4800
-F 0 "R10" H 7668 4846 50  0000 L CNN
-F 1 "2k" H 7668 4755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7640 4790 50  0001 C CNN
-F 3 "~" H 7600 4800 50  0001 C CNN
-	1    7600 4800
+P 7600 4650
+F 0 "R10" H 7668 4696 50  0000 L CNN
+F 1 "2k" H 7668 4605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7640 4640 50  0001 C CNN
+F 3 "~" H 7600 4650 50  0001 C CNN
+	1    7600 4650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2319,79 +2260,79 @@ $EndComp
 $Comp
 L Device:C C4
 U 1 1 6081368D
-P 2600 3650
-F 0 "C4" V 2348 3650 50  0000 C CNN
-F 1 "1uF FILM" V 2439 3650 50  0000 C CNN
-F 2 "high-gain-diff-probe:C_6054_WIMA" H 2638 3500 50  0001 C CNN
-F 3 "~" H 2600 3650 50  0001 C CNN
-F 4 "SMDTF04100YA00JT00" V 2600 3650 50  0001 C CNN "MPN"
-	1    2600 3650
+P 2600 3750
+F 0 "C4" V 2348 3750 50  0000 C CNN
+F 1 "1uF FILM" V 2439 3750 50  0000 C CNN
+F 2 "high-gain-diff-probe:C_6054_WIMA" H 2638 3600 50  0001 C CNN
+F 3 "~" H 2600 3750 50  0001 C CNN
+F 4 "SMDTF04100YA00JT00" V 2600 3750 50  0001 C CNN "MPN"
+	1    2600 3750
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R_US R2
 U 1 1 607FD4DB
-P 2450 3300
-F 0 "R2" V 2245 3300 50  0000 C CNN
-F 1 "475k" V 2336 3300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2490 3290 50  0001 C CNN
-F 3 "~" H 2450 3300 50  0001 C CNN
-	1    2450 3300
-	0    1    1    0   
+P 2450 3950
+F 0 "R2" V 2245 3950 50  0000 C CNN
+F 1 "475k" V 2336 3950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2490 3940 50  0001 C CNN
+F 3 "~" H 2450 3950 50  0001 C CNN
+	1    2450 3950
+	0    1    -1   0   
 $EndComp
 $Comp
 L Device:R_US R1
 U 1 1 607FC8CB
-P 2450 1500
-F 0 "R1" V 2245 1500 50  0000 C CNN
-F 1 "475k" V 2336 1500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2490 1490 50  0001 C CNN
-F 3 "~" H 2450 1500 50  0001 C CNN
-	1    2450 1500
-	0    1    1    0   
+P 2450 2150
+F 0 "R1" V 2245 2150 50  0000 C CNN
+F 1 "475k" V 2336 2150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2490 2140 50  0001 C CNN
+F 3 "~" H 2450 2150 50  0001 C CNN
+	1    2450 2150
+	0    1    -1   0   
 $EndComp
 $Comp
 L Connector:Conn_01x01_Female J1
 U 1 1 607ED873
-P 1500 1850
-F 0 "J1" H 1392 1625 50  0000 C CNN
-F 1 "BANANA" H 1392 1716 50  0000 C CNN
-F 2 "Connector:Banana_Jack_1Pin" H 1500 1850 50  0001 C CNN
-F 3 "~" H 1500 1850 50  0001 C CNN
-	1    1500 1850
+P 1500 1950
+F 0 "J1" H 1392 1725 50  0000 C CNN
+F 1 "BANANA" H 1392 1816 50  0000 C CNN
+F 2 "Connector:Banana_Jack_1Pin" H 1500 1950 50  0001 C CNN
+F 3 "~" H 1500 1950 50  0001 C CNN
+	1    1500 1950
 	-1   0    0    1   
 $EndComp
 $Comp
 L Connector:Conn_01x01_Female J3
 U 1 1 607ECC50
-P 1500 3650
-F 0 "J3" H 1392 3425 50  0000 C CNN
-F 1 "BANANA" H 1392 3516 50  0000 C CNN
-F 2 "Connector:Banana_Jack_1Pin" H 1500 3650 50  0001 C CNN
-F 3 "~" H 1500 3650 50  0001 C CNN
-	1    1500 3650
+P 1500 3750
+F 0 "J3" H 1392 3525 50  0000 C CNN
+F 1 "BANANA" H 1392 3616 50  0000 C CNN
+F 2 "Connector:Banana_Jack_1Pin" H 1500 3750 50  0001 C CNN
+F 3 "~" H 1500 3750 50  0001 C CNN
+	1    1500 3750
 	-1   0    0    1   
 $EndComp
 $Comp
 L Connector:Conn_Coaxial J4
 U 1 1 607EB086
-P 1500 3950
-F 0 "J4" H 1428 4188 50  0000 C CNN
-F 1 "BNC" H 1428 4097 50  0000 C CNN
-F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 1500 3950 50  0001 C CNN
-F 3 " ~" H 1500 3950 50  0001 C CNN
-	1    1500 3950
+P 1500 4050
+F 0 "J4" H 1428 4288 50  0000 C CNN
+F 1 "BNC" H 1428 4197 50  0000 C CNN
+F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 1500 4050 50  0001 C CNN
+F 3 " ~" H 1500 4050 50  0001 C CNN
+	1    1500 4050
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_Coaxial J2
 U 1 1 607E9E0E
-P 1500 2150
-F 0 "J2" H 1428 2388 50  0000 C CNN
-F 1 "BNC" H 1428 2297 50  0000 C CNN
-F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 1500 2150 50  0001 C CNN
-F 3 " ~" H 1500 2150 50  0001 C CNN
-	1    1500 2150
+P 1500 2250
+F 0 "J2" H 1428 2488 50  0000 C CNN
+F 1 "BNC" H 1428 2397 50  0000 C CNN
+F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 1500 2250 50  0001 C CNN
+F 3 " ~" H 1500 2250 50  0001 C CNN
+	1    1500 2250
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -2400,8 +2341,9 @@ U 1 1 607E6790
 P 3600 1900
 F 0 "SW1" H 3600 2150 50  0000 C CNN
 F 1 "MB04L1NCGD" H 3600 1600 50  0000 C CNN
-F 2 "" H 2975 2075 50  0001 C CNN
+F 2 "high-gain-diff-probe:SW_DPNT_CK_M" H 2975 2075 50  0001 C CNN
 F 3 "~" H 2975 2075 50  0001 C CNN
+F 4 "MB04L1NCGD" H 3600 1900 50  0001 C CNN "MPN"
 	1    3600 1900
 	-1   0    0    -1  
 $EndComp
@@ -2411,8 +2353,9 @@ U 2 1 607E594A
 P 3600 3700
 F 0 "SW1" H 3600 3950 50  0000 C CNN
 F 1 "MB04L1NCGD" H 3600 3400 50  0000 C CNN
-F 2 "" H 2975 3875 50  0001 C CNN
+F 2 "high-gain-diff-probe:SW_DPNT_CK_M" H 2975 3875 50  0001 C CNN
 F 3 "~" H 2975 3875 50  0001 C CNN
+F 4 "MB04L1NCGD" H 3600 3700 50  0001 C CNN "MPN"
 	2    3600 3700
 	-1   0    0    -1  
 $EndComp
@@ -2534,6 +2477,7 @@ F 0 "U1" H 10350 2950 50  0000 L CNN
 F 1 "AD8428BRZ" H 10350 2650 50  0000 L CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 10000 2800 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8429.pdf" H 10550 2400 50  0001 C CNN
+F 4 "AD8428BRZ" H 10100 2800 50  0001 C CNN "MPN"
 	1    10100 2800
 	1    0    0    -1  
 $EndComp
@@ -2619,24 +2563,96 @@ $EndComp
 $Comp
 L Device:R_US R3
 U 1 1 60810F75
-P 2600 2250
-F 0 "R3" V 2395 2250 50  0000 C CNN
-F 1 "50" V 2486 2250 50  0000 C CNN
-F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" V 2640 2240 50  0001 C CNN
-F 3 "~" H 2600 2250 50  0001 C CNN
-	1    2600 2250
+P 2600 1550
+F 0 "R3" V 2395 1550 50  0000 C CNN
+F 1 "50" V 2486 1550 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" V 2640 1540 50  0001 C CNN
+F 3 "~" H 2600 1550 50  0001 C CNN
+	1    2600 1550
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2200 2250 2450 2250
+	2200 1550 2450 1550
 Wire Wire Line
-	2200 1850 2200 2250
-Wire Wire Line
-	2750 2250 3000 2250
-Wire Wire Line
-	3000 2250 3000 1950
-Text Notes 550  1400 0    50   ~ 0
+	2750 1550 3000 1550
+Text Notes 1650 1100 0    50   ~ 0
 Can choose different AC cap depending\non your low frequency, voltage, leakage,\nmicrophonics, and cost priorities.
 Text Notes 12800 4700 0    50   ~ 0
 TODO: Check size of pots you have
+Wire Wire Line
+	3100 7550 3250 7550
+Connection ~ 3250 7550
+Wire Wire Line
+	3250 7550 3250 7450
+Wire Wire Line
+	3100 9550 3250 9550
+Wire Wire Line
+	3250 9550 3250 9450
+Connection ~ 3250 9450
+NoConn ~ 3100 7350
+NoConn ~ 3100 9350
+Wire Wire Line
+	1800 3750 2200 3750
+Wire Wire Line
+	2450 1950 2200 1950
+Connection ~ 1800 1950
+Connection ~ 2200 3750
+Wire Wire Line
+	2200 3750 2450 3750
+Wire Wire Line
+	3000 3350 3000 3650
+$Comp
+L Device:C C2
+U 1 1 607FE489
+P 2450 4300
+F 0 "C2" V 2198 4300 50  0000 C CNN
+F 1 "27pF" V 2289 4300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2488 4150 50  0001 C CNN
+F 3 "~" H 2450 4300 50  0001 C CNN
+	1    2450 4300
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	2200 4300 2300 4300
+Connection ~ 2200 1950
+Wire Wire Line
+	2200 1950 1800 1950
+Wire Wire Line
+	3000 2150 3000 2050
+Connection ~ 3000 2150
+Wire Wire Line
+	2200 1550 2200 1950
+Wire Wire Line
+	3000 1550 3000 1850
+$Comp
+L high-gain-diff-probe:SW_DP4T SW2
+U 1 1 61067066
+P 8400 4400
+F 0 "SW2" H 8400 4750 50  0000 C CNN
+F 1 "MB04L1NCGD" H 8400 4100 50  0000 C CNN
+F 2 "high-gain-diff-probe:SW_DPNT_CK_M" H 7775 4575 50  0001 C CNN
+F 3 "~" H 7775 4575 50  0001 C CNN
+F 4 "Gain Select" H 8400 4650 50  0000 C CNN "Name"
+F 5 "MB04L1NCGD" H 8400 4400 50  0001 C CNN "MPN"
+	1    8400 4400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L high-gain-diff-probe:SW_DP4T SW2
+U 2 1 61067BFC
+P 8400 5100
+F 0 "SW2" H 8400 4700 50  0000 C CNN
+F 1 "MB04L1NCGD" H 8400 4800 50  0000 C CNN
+F 2 "high-gain-diff-probe:SW_DPNT_CK_M" H 7775 5275 50  0001 C CNN
+F 3 "~" H 7775 5275 50  0001 C CNN
+F 4 "MB04L1NCGD" H 8400 5100 50  0001 C CNN "MPN"
+	2    8400 5100
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 8200 4250
+NoConn ~ 8200 4550
+NoConn ~ 8200 4950
+NoConn ~ 8200 5250
+Wire Wire Line
+	7300 5150 8200 5150
 $EndSCHEMATC
