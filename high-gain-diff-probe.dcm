@@ -12,4 +12,10 @@ K buffer amplifier
 F https://www.analog.com/media/en/technical-documentation/data-sheets/LT1010.pdf
 $ENDCMP
 #
+$CMP SW_DP4T
+D Switch, four position, dual pole quadruple throw, 4 position switch, SP4T
+K switch dp4t ON-ON-ON-ON
+F ~
+$ENDCMP
+#
 #End Doc Library
