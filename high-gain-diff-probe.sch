@@ -168,19 +168,13 @@ Wire Wire Line
 Wire Wire Line
 	11600 2200 11150 2200
 Wire Wire Line
-	11150 2200 11150 3750
-Wire Wire Line
-	11150 3750 10400 3750
+	11150 2200 11150 3650
 Wire Wire Line
 	11300 2400 11600 2400
 Text Label 11350 2200 0    50   ~ 0
 FIL-
 Text Label 11350 2400 0    50   ~ 0
 FIL+
-Wire Wire Line
-	8950 3650 10000 3650
-Wire Wire Line
-	10000 3750 9450 3750
 Text Label 10850 3200 0    50   ~ 0
 AMPIN+
 Text Label 10850 1400 0    50   ~ 0
@@ -980,13 +974,9 @@ Wire Wire Line
 Connection ~ 8350 7700
 Text Notes 12050 8100 0    50   ~ 0
 If the differential input voltage is 0.6V or more the\nprotection diodes start to conduct.\n\nThe output saturates well before that due to the high gain.
-Connection ~ 8950 3200
 Connection ~ 9250 1400
-Connection ~ 9550 3200
 Wire Wire Line
 	9550 3200 9950 3200
-Wire Wire Line
-	8950 3200 9550 3200
 Wire Wire Line
 	8300 3200 8500 3200
 Wire Wire Line
@@ -1042,7 +1032,7 @@ Text Notes 7700 1050 0    50   ~ 0
 Low-leakage diodes protect INA inputs from\ncommon mode voltages beyond the supply rails\nand differential voltages above 1V. Can handle\n500mA until they overheat or about 40V to GND\non the LoZ inputs.
 Text Notes 9850 1050 0    50   ~ 0
 33ohm resistors ensure protection diodes\nconduct before INA internal diodes, and\nform an RF low-pass filter with the capacitors.\nCould add a ferrite bead as well but be careful\nabout resonance.
-Text Notes 8950 5150 0    50   ~ 0
+Text Notes 9350 5000 0    50   ~ 0
 Default gain of INA is 2000X. Absolute accuracy of\nINA internal resistors is 10X so need that much trim range.
 Text Notes 12850 1750 0    50   ~ 0
 Adjustable low-pass filter.\nC18: Just tones down very high frequencies.\nC20: 96.5kHz -3dB
@@ -2272,31 +2262,6 @@ Wire Wire Line
 	5150 4250 5250 4250
 Wire Wire Line
 	1500 2000 1200 2000
-$Comp
-L high-gain-diff-probe:SW_DP5T SW2
-U 1 1 61067066
-P 10200 3750
-F 0 "SW2" H 9900 3700 50  0000 C CNN
-F 1 "MB05L1NCGD" H 9900 3600 50  0000 C CNN
-F 2 "high-gain-diff-probe:SW_DPNT_CK_M" H 9575 3925 50  0001 C CNN
-F 3 "~" H 9575 3925 50  0001 C CNN
-F 4 "Gain Select" H 9900 3500 50  0000 C CNN "Name"
-F 5 "MB05L1NCGD" H 10200 3750 50  0001 C CNN "MPN"
-	1    10200 3750
-	-1   0    0    -1  
-$EndComp
-$Comp
-L high-gain-diff-probe:SW_DP5T SW2
-U 2 1 61067BFC
-P 8300 3800
-F 0 "SW2" H 8300 3350 50  0000 C CNN
-F 1 "MB05L1NCGD" H 8300 3450 50  0000 C CNN
-F 2 "high-gain-diff-probe:SW_DPNT_CK_M" H 7675 3975 50  0001 C CNN
-F 3 "~" H 7675 3975 50  0001 C CNN
-F 4 "MB05L1NCGD" H 8300 3800 50  0001 C CNN "MPN"
-	2    8300 3800
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	15850 2300 16100 2300
 Text Label 15900 2300 0    50   ~ 0
@@ -2597,55 +2562,6 @@ Wire Wire Line
 Connection ~ 2300 3800
 Wire Wire Line
 	3150 3800 2300 3800
-$Comp
-L Relay:G6K-2 K?
-U 1 1 61786BD7
-P 4450 1800
-F 0 "K?" V 3683 1800 50  0000 C CNN
-F 1 "FTR-B3GA4.5Z" V 3774 1800 50  0000 C CNN
-F 2 "Relay_SMD:Relay_Fujitsu_FTR-B3S" H 4450 1800 50  0001 L CNN
-F 3 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf" H 4450 1800 50  0001 C CNN
-	1    4450 1800
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 617B55CE
-P 4050 1450
-F 0 "#PWR?" H 4050 1200 50  0001 C CNN
-F 1 "GND" H 4055 1277 50  0000 C CNN
-F 2 "" H 4050 1450 50  0001 C CNN
-F 3 "" H 4050 1450 50  0001 C CNN
-	1    4050 1450
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 1450 4050 1400
-Wire Wire Line
-	4050 1400 4150 1400
-Wire Wire Line
-	4050 1400 4050 900 
-Wire Wire Line
-	4050 900  4300 900 
-Connection ~ 4050 1400
-Wire Wire Line
-	4750 1400 4850 1400
-Wire Wire Line
-	4850 1400 4850 900 
-Wire Wire Line
-	4850 900  4600 900 
-$Comp
-L Diode:1N4001 D?
-U 1 1 618317B7
-P 4450 900
-F 0 "D?" H 4450 683 50  0000 C CNN
-F 1 "S1A" H 4450 774 50  0000 C CNN
-F 2 "Diode_SMD:D_SMA_Handsoldering" H 4450 725 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4450 900 50  0001 C CNN
-F 4 "S1A-13-F" H 4450 900 50  0001 C CNN "MPN"
-	1    4450 900 
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	4150 1800 3750 1800
 Wire Wire Line
@@ -2714,55 +2630,6 @@ Wire Wire Line
 Wire Wire Line
 	3150 2900 3150 3000
 Connection ~ 3150 2900
-$Comp
-L Relay:G6K-2 K?
-U 1 1 61CEDBAC
-P 4450 4000
-F 0 "K?" V 3683 4000 50  0000 C CNN
-F 1 "FTR-B3GA4.5Z" V 3774 4000 50  0000 C CNN
-F 2 "Relay_SMD:Relay_Fujitsu_FTR-B3S" H 4450 4000 50  0001 L CNN
-F 3 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf" H 4450 4000 50  0001 C CNN
-	1    4450 4000
-	0    1    -1   0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 61CEDBB2
-P 4050 4950
-F 0 "#PWR?" H 4050 4700 50  0001 C CNN
-F 1 "GND" H 4055 4777 50  0000 C CNN
-F 2 "" H 4050 4950 50  0001 C CNN
-F 3 "" H 4050 4950 50  0001 C CNN
-	1    4050 4950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 4400 4150 4400
-Wire Wire Line
-	4050 4400 4050 4900
-Wire Wire Line
-	4050 4900 4300 4900
-Wire Wire Line
-	4750 4400 4850 4400
-Wire Wire Line
-	4850 4400 4850 4900
-Wire Wire Line
-	4850 4900 4600 4900
-$Comp
-L Diode:1N4001 D?
-U 1 1 61CEDBC1
-P 4450 4900
-F 0 "D?" H 4450 4683 50  0000 C CNN
-F 1 "S1A" H 4450 4774 50  0000 C CNN
-F 2 "Diode_SMD:D_SMA_Handsoldering" H 4450 4725 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4450 4900 50  0001 C CNN
-F 4 "S1A-13-F" H 4450 4900 50  0001 C CNN "MPN"
-	1    4450 4900
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 4950 4050 4900
-Connection ~ 4050 4900
 Wire Wire Line
 	4150 4000 3750 4000
 Wire Wire Line
@@ -2870,16 +2737,6 @@ Wire Wire Line
 Connection ~ 3950 3600
 Wire Wire Line
 	3950 3600 4150 3600
-Text GLabel 4950 900  2    50   Input ~ 0
-ATTEN_EN
-Wire Wire Line
-	4950 900  4850 900 
-Connection ~ 4850 900 
-Text GLabel 4950 4900 2    50   Input ~ 0
-ATTEN_EN
-Wire Wire Line
-	4950 4900 4850 4900
-Connection ~ 4850 4900
 Wire Wire Line
 	1250 3800 1500 3800
 $Comp
@@ -3049,157 +2906,144 @@ Wire Wire Line
 	7800 3200 8000 3200
 Wire Wire Line
 	7800 1400 8000 1400
-NoConn ~ 9450 3550
+NoConn ~ 10050 3550
 $Comp
 L Device:R_US R?
 U 1 1 63BB42F5
-P 8950 4300
-F 0 "R?" H 9000 4350 50  0000 L CNN
-F 1 "430" H 9000 4250 50  0000 L CNN
-F 2 "" V 8990 4290 50  0001 C CNN
-F 3 "~" H 8950 4300 50  0001 C CNN
-F 4 "RMCF0603FT453R" H 8950 4300 50  0001 C CNN "MPN"
-	1    8950 4300
+P 9550 3850
+F 0 "R?" H 9600 3900 50  0000 L CNN
+F 1 "430" H 9600 3800 50  0000 L CNN
+F 2 "" V 9590 3840 50  0001 C CNN
+F 3 "~" H 9550 3850 50  0001 C CNN
+F 4 "RMCF0603FT453R" H 9550 3850 50  0001 C CNN "MPN"
+	1    9550 3850
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_POT_US RV?
 U 1 1 63D48392
-P 8950 4700
-F 0 "RV?" H 8900 4650 50  0000 R CNN
-F 1 "500" H 8900 4750 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Vishay_T73YP_Vertical" H 8950 4700 50  0001 C CNN
-F 3 "~" H 8950 4700 50  0001 C CNN
-F 4 "" H 8850 4800 50  0000 R CNN "Name"
-F 5 "CT6EP501" H 8950 4700 50  0001 C CNN "MPN"
-	1    8950 4700
+P 9550 4250
+F 0 "RV?" H 9500 4200 50  0000 R CNN
+F 1 "500" H 9500 4300 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Vishay_T73YP_Vertical" H 9550 4250 50  0001 C CNN
+F 3 "~" H 9550 4250 50  0001 C CNN
+F 4 "" H 9450 4350 50  0000 R CNN "Name"
+F 5 "CT6EP501" H 9550 4250 50  0001 C CNN "MPN"
+	1    9550 4250
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8800 4700 8750 4700
+	9400 4250 9350 4250
 Wire Wire Line
-	8750 4700 8750 4500
+	9350 4250 9350 4050
 Wire Wire Line
-	8750 4500 8950 4500
+	9350 4050 9550 4050
 Wire Wire Line
-	8950 4500 8950 4550
+	9550 4050 9550 4100
 Wire Wire Line
-	8950 4500 8950 4450
-Connection ~ 8950 4500
+	9550 4050 9550 4000
+Connection ~ 9550 4050
 Wire Wire Line
-	8950 4850 8950 4900
+	11300 2400 11300 4450
+Text Label 10600 3750 2    50   ~ 0
+RG_20X
+Text Label 10600 3650 2    50   ~ 0
+RG_200X
+Wire Wire Line
+	10600 3550 10050 3550
 $Comp
-L Device:R_POT_US RV?
-U 1 1 63EDDF16
-P 9750 4700
-F 0 "RV?" H 9700 4650 50  0000 R CNN
-F 1 "500" H 9700 4750 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Vishay_T73YP_Vertical" H 9750 4700 50  0001 C CNN
-F 3 "~" H 9750 4700 50  0001 C CNN
-F 4 "" H 9650 4800 50  0000 R CNN "Name"
-F 5 "CT6EP501" H 9750 4700 50  0001 C CNN "MPN"
-	1    9750 4700
-	-1   0    0    1   
+L Switch:SW_DP3T SW?
+U 2 1 6474A685
+P 10800 4450
+F 0 "SW?" H 10800 4150 50  0000 C CNN
+F 1 "SW_DP3T" H 10800 4250 50  0000 C CNN
+F 2 "" H 10175 4625 50  0001 C CNN
+F 3 "~" H 10175 4625 50  0001 C CNN
+	2    10800 4450
+	-1   0    0    -1  
 $EndComp
+$Comp
+L Switch:SW_DP3T SW?
+U 1 1 6474AABA
+P 10800 3650
+F 0 "SW?" H 10800 3350 50  0000 C CNN
+F 1 "SW_DP3T" H 10800 3450 50  0000 C CNN
+F 2 "" H 10175 3825 50  0001 C CNN
+F 3 "~" H 10175 3825 50  0001 C CNN
+	1    10800 3650
+	-1   0    0    -1  
+$EndComp
+Text Label 10600 3550 2    50   ~ 0
+RG_2000X
+Connection ~ 9550 3200
+Connection ~ 8950 3200
 Wire Wire Line
-	9600 4700 9550 4700
+	8950 3200 9550 3200
 Wire Wire Line
-	9550 4700 9550 4500
+	10600 3650 9550 3650
 Wire Wire Line
-	9550 4500 9750 4500
+	10600 3750 10050 3750
 Wire Wire Line
-	9750 4500 9750 4550
+	10050 3750 10050 3850
+Connection ~ 10050 3850
+Connection ~ 10150 3850
 Wire Wire Line
-	9750 4850 9750 4900
+	10050 3850 10150 3850
 Wire Wire Line
-	8950 4900 9450 4900
+	10150 3850 10350 3850
+Wire Wire Line
+	10050 4250 10050 4200
+Wire Wire Line
+	10350 4250 10050 4250
+Wire Wire Line
+	10350 4200 10350 4250
+Wire Wire Line
+	10050 3900 10050 3850
 $Comp
 L Device:R_US R?
 U 1 1 63F98622
-P 9450 4700
-F 0 "R?" H 9400 4650 50  0000 R CNN
-F 1 "100" H 9400 4750 50  0000 R CNN
-F 2 "" V 9490 4690 50  0001 C CNN
-F 3 "~" H 9450 4700 50  0001 C CNN
-F 4 "RK73B1JTTD431J" H 9450 4700 50  0001 C CNN "MPN"
-	1    9450 4700
+P 10050 4050
+F 0 "R?" H 10000 4000 50  0000 R CNN
+F 1 "100" H 10000 4100 50  0000 R CNN
+F 2 "" V 10090 4040 50  0001 C CNN
+F 3 "~" H 10050 4050 50  0001 C CNN
+F 4 "RK73B1JTTD431J" H 10050 4050 50  0001 C CNN "MPN"
+	1    10050 4050
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	9450 4850 9450 4900
+	10350 3850 10350 3900
 Wire Wire Line
-	9450 4550 9450 4500
+	10150 4050 10150 3850
 Wire Wire Line
-	9450 4500 9550 4500
-Connection ~ 9550 4500
-Connection ~ 9450 4900
-Connection ~ 9750 4900
-Wire Wire Line
-	9750 4900 11300 4900
-Wire Wire Line
-	9450 4900 9750 4900
-Wire Wire Line
-	11300 2400 11300 4900
-Text Label 9450 4100 3    50   ~ 0
-RG_20X
-Text Label 8950 3750 3    50   ~ 0
-RG_200X
-Wire Wire Line
-	8950 3650 8950 3850
-Text Notes 9900 3950 0    50   ~ 0
-1X
-Text Notes 10000 3850 2    50   ~ 0
-10X
-Text Notes 10000 3750 2    50   ~ 0
-20X
-Text Notes 10000 3650 2    50   ~ 0
-200X
-Text Notes 10000 3550 2    50   ~ 0
-2000X
-Wire Wire Line
-	10000 3950 9450 3950
-Wire Wire Line
-	9450 3950 9450 4500
-Connection ~ 9450 4500
-Wire Wire Line
-	9450 3750 9450 3950
-Connection ~ 9450 3950
-Wire Wire Line
-	10000 3850 8950 3850
-Connection ~ 8950 3850
-Wire Wire Line
-	8950 3850 8950 4150
-Wire Wire Line
-	10000 3550 9450 3550
+	10200 4050 10150 4050
 $Comp
-L power:+5V #PWR?
-U 1 1 644F6BDB
-P 8600 3700
-F 0 "#PWR?" H 8600 3550 50  0001 C CNN
-F 1 "+5V" H 8615 3873 50  0000 C CNN
-F 2 "" H 8600 3700 50  0001 C CNN
-F 3 "" H 8600 3700 50  0001 C CNN
-	1    8600 3700
-	1    0    0    -1  
+L Device:R_POT_US RV?
+U 1 1 63EDDF16
+P 10350 4050
+F 0 "RV?" H 10300 4000 50  0000 R CNN
+F 1 "500" H 10300 4100 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Vishay_T73YP_Vertical" H 10350 4050 50  0001 C CNN
+F 3 "~" H 10350 4050 50  0001 C CNN
+F 4 "" H 10250 4150 50  0000 R CNN "Name"
+F 5 "CT6EP501" H 10350 4050 50  0001 C CNN "MPN"
+	1    10350 4050
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8600 3700 8600 3800
+	10600 4550 10050 4550
 Wire Wire Line
-	8600 3800 8500 3800
-NoConn ~ 8100 3600
-NoConn ~ 8100 3700
-NoConn ~ 8100 3800
+	10050 4550 10050 4250
+Connection ~ 10050 4250
 Wire Wire Line
-	8100 3900 8000 3900
+	9550 3700 9550 3650
 Wire Wire Line
-	8000 3900 8000 4000
+	10600 4450 9550 4450
 Wire Wire Line
-	8000 4000 8100 4000
-Text GLabel 7900 3900 0    50   Input ~ 0
-ATTEN_EN
+	9550 4450 9550 4400
 Wire Wire Line
-	7900 3900 8000 3900
-Connection ~ 8000 3900
-Text Notes 7500 4550 0    50   ~ 0
-Enable 20:1 Attenuator\nfor 10X and 1X ranges.
+	11000 4450 11300 4450
+Wire Wire Line
+	11000 3650 11150 3650
+NoConn ~ 10600 4350
 $EndSCHEMATC
