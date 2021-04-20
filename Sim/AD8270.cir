@@ -1,0 +1,81 @@
+* AD8270 SPICE Macro-model        
+* Description: Amplifier
+* Generic Desc: DiffAmp, Low Cost,low power, G=0.5, 1 or 2
+* Developed by: Analog Devices
+* Revision History: 
+*		01/28/2014 - Initial Revision
+* 1.0 (12/2013)
+* Copyright 2012 by Analog Devices, Inc.
+*
+* Refer to http://www.analog.com/Analog_Root/static/techSupport/designTools/spiceModels/license/spice_general.html for License Statement. Use of this model 
+* indicates your acceptance of the terms and provisions in the License Statement.
+* 
+* BEGIN Notes:
+*
+* Not Modelled:
+*    AC Bump near cutoff for G=1, G=0.5
+*	 Cross talk
+*	 1/f noise
+* END Notes
+*
+* Node assignments
+.subckt AD8270 in1a_m in2a_m in2a_p in1a_p ref1a ref2a outa vcc vee
+
+*Power supply stage
+Evcc i_vcc 0 vcc 0 1
+Evee i_vee 0 vee 0 1 
+Iq vcc vee 2.5e-3
+Gcurr isteer 0 vor outa 1
+Dis1 vsense1 isteer genD
+Dis2 isteer vsense2 genD
+Vs1 vsense1 0 0
+Vs2 vsense2 0 0
+F1 vcc 0 Vs1 1 
+F2 0 vee Vs2 1 
+
+*Input Stage
+Voffset in_p in_po 3e-4
+G1 0 inputgain in_po in_m 0.01
+Rin1 outa in_m 10e3
+Rin2 in1a_m in_m 10e3
+Rin3 in2a_m in_m 10e3
+Rin4 in1a_p in_p 10e3
+Rin5 in2a_p in_p 10e3
+Rin6 ref1a in_p 20e3
+Rin7 ref2a in_p 20e3
+Rgain inputgain 0 1e8
+Cgain inputgain 0 75e-12
+
+
+
+*CFA Slew Limiter
+Q1 hsd1 hsd1 inputgain genNPN
+Q2 hsd2 hsd1 cfaout genNPN
+Q3 lsd1 lsd1 inputgain genPNP
+Q4 lsd2 lsd1 cfaout genPNP
+I1 i_vcc hsd1 25e-6
+I2 i_vcc hsd2 25e-6
+I3 lsd1 i_vee 25e-6
+I4 lsd2 i_vee 25e-6
+D1 hsd2 i_vcc genD
+D2 i_vee lsd2 genD
+Q5 cfaout hsd2 re2 genPNP
+Rlim1 i_vcc re2 5e3
+Q6 cfaout lsd2 re1 genNPN
+Rlim2 i_vee re1 5e3
+Rcfa cfaout cfaout2 150
+Ccfa cfaout2 0 75e-12
+Vrail_low cfaout lowlim 1.4
+D3 i_vee lowlim genD
+Vrail_high i_vcc hilim 1.4
+D4 cfaout hilim genD
+
+*Output stage
+E1 vor 0 cfaout2 0 1
+Rout vor outa 1
+
+
+.model genNPN NPN Is=1e-12 Bf=300 Vaf=100 
+.model genPNP PNP Is=1e-12 Bf=300 Vaf=100
+.model genD D Is=1e-12
+.ENDS
