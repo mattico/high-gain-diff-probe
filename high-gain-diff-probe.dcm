@@ -18,4 +18,10 @@ K switch dp4t ON-ON-ON-ON
 F ~
 $ENDCMP
 #
+$CMP SW_DP5T
+D Switch, five position, dual pole 5 throw, 5 position switch, SP5T
+K switch dp5t
+F ~
+$ENDCMP
+#
 #End Doc Library
