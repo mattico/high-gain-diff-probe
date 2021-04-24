@@ -333,7 +333,7 @@ U 1 1 610D55C8
 P 14350 2350
 F 0 "U3" H 14450 2550 50  0000 L CNN
 F 1 "BUF634A" H 14450 2150 50  0000 L CNN
-F 2 "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.81mm_ThermalVias" H 14350 2050 50  0001 C CNN
+F 2 "high-gain-diff-probe:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.81mm_LargeThermalVias" H 14350 2050 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/buf634a.pdf?ts=1618584295467&ref_url=https%253A%252F%252Fcz.mouser.com%252F" H 14350 2350 50  0001 C CNN
 	1    14350 2350
 	1    0    0    -1  
@@ -2554,7 +2554,7 @@ U 1 1 60F9CB5C
 P 3950 9000
 F 0 "U8" H 4000 9150 50  0000 L CNN
 F 1 "BUF634A" H 4000 8850 50  0000 L CNN
-F 2 "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.81mm_ThermalVias" H 3950 8700 50  0001 C CNN
+F 2 "high-gain-diff-probe:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.81mm_LargeThermalVias" H 3950 8700 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/buf634a.pdf?ts=1618584295467&ref_url=https%253A%252F%252Fcz.mouser.com%252F" H 3950 9000 50  0001 C CNN
 	1    3950 9000
 	1    0    0    -1  
