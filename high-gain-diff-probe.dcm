@@ -30,6 +30,12 @@ K dcdc boost buck dual
 F http://www.linear.com/docs/2137
 $ENDCMP
 #
+$CMP SW_DP3T_NKK_MRB
+D Switch, three position, dual pole triple throw, 3 position switch, SP3T
+K switch dp3t ON-ON-ON
+F ~
+$ENDCMP
+#
 $CMP SW_DP4T
 D Switch, four position, dual pole quadruple throw, 4 position switch, SP4T
 K switch dp4t ON-ON-ON-ON
