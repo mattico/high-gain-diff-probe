@@ -48,6 +48,12 @@ K switch dp5t
 F ~
 $ENDCMP
 #
+$CMP SW_DPDT_x2_GND
+D Switch, dual pole double throw, separate symbols
+K switch dual-pole double-throw DPDT spdt ON-ON
+F ~
+$ENDCMP
+#
 $CMP TPS723
 D 200-mA, negative, adjustable low-dropout voltage regulator with enable, SOT-23-5
 K linear low dropout Regulator fixed negative
