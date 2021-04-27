@@ -1158,8 +1158,6 @@ Wire Wire Line
 Wire Wire Line
 	2500 8200 2550 8200
 Connection ~ 2550 8200
-Text Notes 11900 4150 0    50   ~ 0
-TODO: Connect frame of switches to GND
 Wire Wire Line
 	12650 2700 12850 2700
 Connection ~ 12850 2700
